@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask import render_template
 
 OPT = Flask(__name__)
 CORS(OPT)
@@ -145,7 +146,10 @@ def optimise_basket(basket):
     # Return the complete basket with the lowest total CO2
     _, new_basket = min(dp.values(), key=lambda x: x[0])
     return new_basket
-
+    
+@OPT.route('/')
+def home():
+    return render_template('index.html')
 
 @OPT.route('/optimise', methods=['POST'])
 def optimise():
@@ -163,6 +167,7 @@ def optimise():
 
 if __name__ == '__main__':
     OPT.run(debug=True)
+
 
 
 
