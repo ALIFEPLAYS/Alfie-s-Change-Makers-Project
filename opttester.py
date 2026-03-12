@@ -6,7 +6,9 @@ from flask import render_template
 OPT = Flask(__name__)
 CORS(OPT)
 
-df = pd.read_excel('Optimiserdata.xlsx', sheet_name='Sheet2')
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_excel(os.path.join(BASE_DIR, 'Optimiserdata.xlsx'), sheet_name='Sheet2')
 
 # Category definitions: prefix -> (Name col, Price col, CO2 col)
 CATEGORIES = {
@@ -167,6 +169,9 @@ def optimise():
 
 if __name__ == '__main__':
     OPT.run(debug=True)
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <style>
         * { margin: 0; padding: 10; box-sizing: border-box; }
 
@@ -85,6 +85,21 @@
             gap: 20px;
             border-radius: 10px;
             box-shadow: 0 1px 3px rgba(0,0,0);
+        }
+
+        .optimise-button {
+            position: absolute;
+            top: 20px;
+            left: 150px;
+            background-color: rgb(100, 200, 100); 
+            border: 1px solid #000; 
+            padding: 10px;
+            flex-wrap: wrap;
+            display:flex;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0);
+            cursor: pointer;
         }
 
         .Item-boxes {
@@ -173,77 +188,6 @@
             color:#000000;
         }
 
-        .Product-group-boxes {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            width: 100%;
-            
-        }
-
-        .Product-group-boxes h2 {
-            size: 72px;
-            color: #000000;
-            text-align: center;
-
-        
-        }
-
-        .Product-group-box {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            flex-wrap:wrap;
-            position:relative;
-            align-items:center;
-            margin: auto;
-            justify-content: center;
-        }
-
-        .Product-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: white;
-            border: 5px solid rgb(148, 20, 162);
-            border-radius: 10px;
-            padding: 10px;
-            
-        }
-
-        .Product-box img{
-            max-width: 200 px;
-            height: 200px;
-        }        
-
-
-
-        .Product-box:hover{
-            background-color: rgb(148, 20, 162);
-            transition : background-color 0.5s;
-        }
-
-        .Product-box:hover p {
-            color: rgb(255, 255, 255);
-            transition : color 0.5s;
-        }
-
-        .Product-box.selected {
-            background-color: rgb(148, 20, 162);
-        }
-
-        .Product-box.selected p {
-            color: rgb(255, 255, 255);
-        }
-
-        .Product-box p {
-            color: #000000;
-            font-size: 18px;
-            text-align: center;
-            padding: 5px;
-        }
-
-
         .footer {
             background-color: #f1f1f1; padding: 20px; text-align: center; color: #333; border-top: 1px solid #ccc; margin-top: 40px;
         }
@@ -252,10 +196,106 @@
             text-decoration: none;
             color: inherit;
         }
+
+        .h1 {
+            margin-top: 70px;
+            Font-size: 64px;
+        }
+
+        .basket-item-together {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items:center;
+            margin: auto;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+            flex-wrap:wrap;
+
+        }
+        .basket-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border: 5px solid rgb(38, 0, 255);
+            border-radius: 10px;
+            margin-right: 10px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .basket-item img {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        .basket-total {
+            background-color: white;
+            border: 5px solid rgb(38, 0, 255);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom:20px;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+        }
+
+        .optimised-basket-together {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap:wrap;
+            position:relative;
+            align-items:center;
+            margin: auto;
+            justify-content: center;
+            
+
+        }
+        .optimised-basket-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border: 5px solid rgb(0, 255, 34);
+            border-radius: 10px;
+            margin-right: 10px;
+            text-align: center;
+            width:250px;
+            height:250px;
+
+        }
+
+        .optimised-basket-item img {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        .optimised-basket-total {
+            background-color: white;
+            border: 5px solid rgb(0, 255, 34);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
     </style>
 
+
 </head>
-<body>
+<body onload="loadBasket()">
     <header>
         <h1>Climate Clear Shopping Calculator</h1>
     </header>
@@ -271,8 +311,12 @@
             </div>
          </a>
          
-         <div class="basket-empty" onclick="emptyBasket()">
+         <div class="basket-empty" onclick="emptyBasket() , loadBasket()">
                 <p>Empty Basket</p>
+         </div>
+
+         <div class="optimise-button" onclick="runOptimisation()">
+                <p>Run Optimisation</p>
          </div>
 
 
@@ -295,67 +339,33 @@
         </a>
     </div>
 
-    <div class="Product-group-boxes">
-        <h2>Dog food</h2>
-        <div class="Product-group-box">
-            <div class="Product-box" data-category="DF" onclick="selectProduct(this, {id: 'DF1', name: 'Cesar', price: 20.10, co2: 16, img: 'DF1.png'})">
-                <img src="DF1.png" alt="Product 1">
-                <p>Cesar</p>
-                <p>£20.10</p>
-                <p>16 kg of CO2</p>
-            </div>
-             <div class="Product-box" data-category="DF" onclick="selectProduct(this, {id: 'DF2', name: 'Pedigree', price: 15.00, co2: 18, img: 'DF2.png'})">
-                <img src="DF2.png" alt="Product 2">
-                <p>Pedigree</p>
-                <p>£15.00</p>
-                <p>18 kg of CO2</p>
-            </div>
-            <div class="Product-box" data-category="DF" onclick="selectProduct(this, {id: 'DF3', name: 'Bakes', price: 14.00, co2: 17, img: 'DF3.png'})">
-                <img src="DF3.png" alt="Product 3">
-                <p>Bakes</p>
-                <p>£14.00</p>
-                <p>14 kg of CO2</p>
-            </div>
-            <div class="Product-box" data-category="DF" onclick="selectProduct(this, {id: 'DF4', name: 'Natures Goodness', price: 19.00, co2: 21, img: 'DF4.png'})">
-                <img src="DF4.png" alt="Product 4">
-                <p>Natures Goodness</p>
-                <p>£19.00</p>
-                <p>21kg of CO2</p>
-            </div>
+    <h1>Your Basket:</h1>
 
-        </div>
-        <h2>Cat food</h2>
-                <div class="Product-group-box">
-            <div class="Product-box" data-category="CF" onclick="selectProduct(this, {id: 'CF1', name: 'Whiskas', price: 3.90, co2: 8, img: 'CF1.png'})">
-                <img src="CF1.png" alt="Product 1">
-                <p>Whiskas</p>
-                <p>£3.90</p>
-                <p>8 kg of CO2</p>
-            </div>
-             <div class="Product-box" data-category="CF" onclick="selectProduct(this, {id: 'CF2', name: 'Felix', price: 5.00, co2: 6, img: 'CF2.png'})">
-                <img src="CF2.png" alt="Product 2">
-                <p>Felix</p>
-                <p>£5.00</p>
-                <p>6 kg of CO2</p>
-            </div>
-            <div class="Product-box" data-category="CF" onclick="selectProduct(this, {id: 'CF3', name: 'Gourmet', price: 4.90, co2: 9, img: 'CF3.png'})">
-                <img src="CF3.png" alt="Product 3">
-                <p>Gourmet</p>
-                <p>£4.90</p>
-                <p>9 kg of CO2</p>
-            </div>
-            <div class="Product-box" data-category="CF" onclick="selectProduct(this, {id: 'CF4', name: 'Sheba', price: 6.00, co2: 3, img: 'CF4.png'})">
-                <img src="CF4.png" alt="Product 4">
-                <p>Sheba</p>
-                <p>£6.00</p>
-                <p>3 kg of CO2</p>
-            </div>
 
-        </div>
-        <div class="Product-group-box">
+    <div id="basket-container" class="basket-item-together"></div>
+
+
+    <div class="basket-total">
+        <h3>Total Cost: £</h3>
+        <span id="total-cost" style="font-weight: bold; font-size: 1.17em;"></span>
+        <h3>Total Carbon Footprint:</h3>
+        <span id="total-carbon" style="font-weight: bold; font-size: 1.17em;"></span>
+        <h3>Kg of CO2</h3>
 
     </div>
 
+
+        <div  id="optimised-basket-container" class="optimised-basket-together">
+        </div>
+
+    
+    <div class="optimised-basket-total">
+        <h3>Total Cost: £</h3>
+        <span id="optimised-total-cost" style="font-weight: bold; font-size: 1.17em;"></span>
+        <h3>Total Carbon Footprint:</h3>
+        <span id="optimised-total-carbon" style="font-weight: bold; font-size: 1.17em;"></span>
+        <h3>Kg of CO2</h3>
+    </div>
 
     <footer class="footer">
         <p>Contact</p>

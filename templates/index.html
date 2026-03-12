@@ -1,10 +1,16 @@
-<!-- filepath: c:\UNI WORK\CM_project\Motivations.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Clear</title>
     <style>
-        * { margin: 0; padding: 10; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
 
         body { 
             font-family: Arial, sans-serif;
@@ -78,7 +84,8 @@
         }
 
         /* Individual box styling: white background, black outline, rounded corners */
-        .box { background: #ffffff; 
+        .Ibox { 
+            background: #ffffff; 
             border: 1px solid #000; 
             padding: 10px; 
             border-radius: 10px; 
@@ -87,6 +94,10 @@
             word-break: break-word;
             display: flex;
             align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            text-align: center;
+            left: 40%;
 
         }
 
@@ -99,6 +110,14 @@
             display: flex;
             flex-direction: column;
             gap: 10px; 
+            width: 300px;
+        }
+
+        .box-inner img { 
+            max-width: 200px; 
+            height: auto; 
+            border-radius: 5px; 
+            align-self: center;
         }
 
         .box p { 
@@ -107,10 +126,16 @@
 
         }
 
+        .content {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
         .footer {
             background-color: #f1f1f1; 
-            padding: 20px; 
-            text-align: center; 
+            padding: 20px; text-align: center; 
             color: #333; 
             border-top: 1px solid #ccc;
             margin-top: 40px;
@@ -120,49 +145,51 @@
 </head>
 <body>
     <header>
-        <h1>Climate Clear</h1>
+        <h1 class="page-title">Climate Clear</h1>
         <nav>
-              <a href="ClimateClear.html">About Us</a>
+            <a href="ClimateClear.html">About Us</a>
             <a href="Motivations.html">Motivations</a>
             <a href="Label.html">Our Label</a>
             <a href="Thedata.html">The Data</a>
             <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
             <a href="obstacles.html">obstacles</a>
             <a href="referances.html">referances</a>
+        </nav>
     </header>
+
     <div class="page-title">
-        <h2>References</h2>
+        <h2>The Climate clear project</h2>
     </div>
-    <div class="boxes">
 
-            <!-- Box 4 -->
-            <div class="box">
+    <div class="content">
+
+        <div class="eachrow">
+            <div class="Ibox">
                 <div class="box-inner">
-                    <h3>References for website</h3>
-                    <p>[1] British Retail Consortium (n.d.) Climate action. Available at: https://brc.org.uk/priorities/sustainability/climate-action/ (Accessed: 11 February 2026).
-
-                    <p>[2] Department for Energy Security and Net Zero (2024) DESNZ public attitudes tracker: net zero and climate change, spring 2024 (UK). Available at: https://www.gov.uk/government/statistics/desnz-public-attitudes-tracker-spring-2024/desnz-public-attitudes-tracker-net-zero-and-climate-change-spring-2024-uk (Accessed: 11 February 2026).</p>
-
-                    <p>[3] Cecchini, M. and Warin, L. (2016) ‘Impact of food labelling systems on food choices and eating behaviours: a systematic review and meta-analysis of randomized studies’, Obesity Reviews, 17(3), pp. 201–210. doi:10.1111/obr.12364.</p>
-
-                    <p>[4] Agarwal, P. (2025) Perfect Competition Explained. Intelligent Economist. Available at: https://www.intelligenteconomist.com/perfect-competition/ (Accessed: 1 March 2026).</p>
+                    <p>Climate clear is a project that proposes a way for consumers to make more informed choices about the environmental impact of their shopping decisions.</p>
+                    <img src="Think.png">
                 </div>
             </div>
-
-                        <!-- Box 4 -->
-            <div class="box">
+            <div class="Ibox">
                 <div class="box-inner">
-                    <h3>References for data in the dishwashing tablet example</h3>
-                    <p>Eco-conception (n.d.) Comparative life-cycle assessment of laundry detergent formulations in the UK. Available at: https://www.eco-conception.fr/data/sources/users/306/docs/acv-detergents.pdf (Accessed: 11 February 2026).</p>
-
-                    <p>Ariel (n.d.) Ariel life cycle assessment. Available at: https://www.ariel.co.uk/en-gb/about-ariel/sustainability/ariel-life-cycle-assessment (Accessed: 11 February 2026).</p>
-
-                    <p>ENDS Report (n.d.) Tesco launches carbon labels on 20 products. Available at: https://www.endsreport.com/article/1570019/tesco-launches-carbon-labels-20-products (Accessed: 11 February 2026).</p>
-
-                    <p>Procter & Gamble (n.d) Comparative life-cycle assessment of laundry detergent formulations in the UK. Available at: https://www.eco-conception.fr/data/sources/users/306/docs/acv-detergents.pdf (Accessed: 11 February 2026).</p>
+                    <p>With increasing conceren regarding the accelarating warming of our climate, more people have become interested and doing what they can to help. </p>
+                    <h4>What better place to do that than in their weekly shop?</h4>
+                    <img src="chartgoup.png">
                 </div>
             </div>
-    
+            <div class="Ibox">
+                <div class="box-inner">
+                    <p>On this website you will find information regarding: </p>
+                    <h4>- The motivation behind the project</h4>
+                    <h4>- How the proposed label would function</h4>
+                    <h4>- How the data for said label is gathered and displayed</h4>
+                    <h4>- Obstacles which could hinder the effectivness of the labeling system</h4> 
+                    <h4>- A shopping optimiser in which you can use see to start making an impact today!</h4>
+                </div>
+            </div>
+        </div>
+    </div>   
+
     <footer class="footer">
         <p>Contact</p>
         <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
