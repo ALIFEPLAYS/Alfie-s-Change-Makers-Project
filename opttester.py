@@ -147,7 +147,7 @@ def optimise_basket(basket):
     return new_basket
 
 
-@app.route('/optimise', methods=['POST'])
+@OPT.route('/optimise', methods=['POST'])
 def optimise():
     basket = request.get_json()
     print("Received basket for optimisation:", basket)
@@ -162,7 +162,8 @@ def optimise():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    OPT.run(debug=True)
+
 
 
 
