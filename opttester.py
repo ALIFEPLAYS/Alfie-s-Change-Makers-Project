@@ -151,6 +151,50 @@ def optimise_basket(basket):
 def home():
     return render_template('index.html')
 
+@OPT.route('/thedata')
+def thedata():
+    return render_template('Thedata.html')
+
+@OPT.route('/motivations')
+def motivations():
+    return render_template('Motivations.html')
+
+@OPT.route('/shoppingoptimiser')
+def shoppingoptimiser():
+    return render_template('ShoppingOptimiser.html')
+
+@OPT.route('/household')
+def household():
+    return render_template('Household.html')
+
+@OPT.route('/label')
+def label():
+    return render_template('Label.html')
+
+@OPT.route('/pets')
+def pets():
+    return render_template('Pets.html')
+
+@OPT.route('/toiletries')
+def toiletries():
+    return render_template('Toiletries.html')
+
+@OPT.route('/shoppingselector')
+def shoppingselector():
+    return render_template('ShoppingSelector.html')
+
+@OPT.route('/basket')
+def basket():
+    return render_template('basket.html')
+
+@OPT.route('/obstacle')
+def obstacle():
+    return render_template('obstacle.html')
+
+@OPT.route('/references')
+def references():
+    return render_template('references.html')
+
 @OPT.route('/optimise', methods=['POST'])
 def optimise():
     basket = request.get_json()
@@ -167,6 +211,7 @@ def optimise():
 
 if __name__ == '__main__':
     OPT.run(debug=True)
+
 
 
 
