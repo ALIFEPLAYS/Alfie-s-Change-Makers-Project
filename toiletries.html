@@ -1,0 +1,479 @@
+<!-- filepath: c:\UNI WORK\CM_project\Motivations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 10; box-sizing: border-box; }
+
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+
+        header { 
+            background-color: #0066cc;
+            color: white; 
+            padding: 20px; 
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+
+        header h1 { 
+            font-size: 28px; 
+            position: relative;}
+
+
+        .basket-link {
+            display: inline-block; /* allow positioning like the div */
+            text-decoration: none; /* remove underline */
+            color: inherit; /* keep text colour inside */
+            position: relative; 
+            width: 180px;
+            top: 10px; 
+            left: 45%;
+
+        }
+        .basket-icon { 
+
+            display: flex; 
+            flex-direction: row;
+            align-items: center ;
+            background-color: rgb(200, 200, 200); 
+            border: 1px solid #000; 
+            padding: 10px;
+            flex-wrap: wrap;
+            display:flex;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0);
+        } 
+
+        .basket-icon-inner {
+            position:relative;
+            display:flex;
+            }
+        
+        .basket-icon-inner img{
+            display: block;
+            max-width: 100%;
+            height: 20px;
+            margin-right: 10px;
+        }    
+        .basket-icon-inner p {
+            color:#000000; 
+            font-size: 18px; 
+            text-align: center;}
+        
+        .basket-icon-inner span {
+            color: #000000;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .basket-empty {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgb(200, 200, 200); 
+            border: 1px solid #000; 
+            padding: 10px;
+            flex-wrap: wrap;
+            display:flex;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0);
+        }
+
+        .Item-boxes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px auto;      /* auto left/right to center container */
+            margin-top: 30px;
+
+        }
+
+        .ItemHH {
+            background-color:white;
+            border: 5px solid red;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+            height: 50px;
+            width: 270px;
+        }
+
+        .ItemHH:hover {
+            background-color: red;
+
+            transition : background-color 0.5s; /* add a fade effect */
+        }
+        .ItemHH:hover h2 {
+            color: white; /* ensure heading inherits hover color */
+            transition: color 0.5s;
+        }
+
+        /* also apply hover effect for other item types */
+        .ItemT:hover {
+            background-color: rgb(1, 88, 8);
+            transition : background-color 0.5s;
+        }
+        .ItemT:hover h2 {
+            color: white;
+            transition: color 0.5s;
+        }
+
+        .ItemP:hover {
+            background-color: rgb(148, 20, 162);
+            transition : background-color 0.5s;
+        }
+        .ItemP:hover h2 {
+            color: white;
+            transition: color 0.5s;
+        }
+        .ItemHH h2 {
+            font-size: 24px;
+            color:#000000;
+
+        }
+
+        .ItemT {
+            background-color:white;
+            border: 5px solid rgb(1, 88, 8);
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+            height: 50px;
+            width: 150px;
+        }
+
+        .ItemT h2 {
+            font-size: 24px;
+            color:#000000;
+        }
+
+
+        .ItemP {
+            background-color:white;
+            border: 5px solid rgb(148, 20, 162);
+            box-shadow: 0 5px 8px rgba(148, 20, 162, 0.1);
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+            height: 50px;
+            width: 100px;
+        }
+
+        .ItemP h2 {
+            font-size: 24px;
+            color:#000000;
+        }
+
+        .Product-group-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 100%;
+            
+        }
+
+        .Product-group-boxes h2 {
+            size: 72px;
+            color: #000000;
+            text-align: center;
+
+        
+        }
+
+        .Product-group-box {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap:wrap;
+            position:relative;
+            align-items:center;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .Product-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border: 5px solid rgb(1, 88, 8);
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+
+        .Product-box img{
+            max-width: 200 px;
+            height: 200px;
+        }
+
+        .Product-box:hover{
+            background-color: rgb(1, 88, 8);
+            transition : background-color 0.5s;
+        }
+
+        .Product-box:hover p {
+            color: rgb(255, 255, 255);
+            transition : color 0.5s;
+        }
+
+        .Product-box.selected {
+            background-color: rgb(1, 88, 8);
+        }
+
+        .Product-box.selected p {
+            color: rgb(255, 255, 255);
+        }
+
+        .Product-box p {
+            color: #000000;
+            font-size: 18px;
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        .footer {
+            background-color: #f1f1f1; padding: 20px; text-align: center; color: #333; border-top: 1px solid #ccc; margin-top: 40px;
+        }
+
+        .itemHH-link, .itemT-link, .itemP-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Climate Clear Shopping Calculator</h1>
+    </header>
+
+
+        <a href="basket.html" class="basket-link">
+            <div class="basket-icon">
+                <div class="basket-icon-inner">
+                     <img src="basket.png">
+                     <p>Your Basket:</p>
+                     <span id="basket-count"></span>
+                 </div>
+            </div>
+         </a>
+         
+         <div class="basket-empty" onclick="emptyBasket()">
+                <p>Empty Basket</p>
+         </div>
+
+
+
+    <div class="Item-boxes">
+        <a href="Household.html" class="itemHH-link">
+        <div class="ItemHH">
+            <h2>washing & cleaning</h2>
+        </div>
+        </a>
+        <a href="toiletries.html" class="itemT-link">
+        <div class="ItemT">
+            <h2>Toiletries</h2>
+        </div>
+        </a>
+        <a href="Pets.html" class="itemP-link">
+        <div class="ItemP">
+            <h2>Pets</h2>
+        </div>
+        </a>
+    </div>
+
+    <div class="Product-group-boxes">
+        <h2>Tooth Paste</h2>
+        <div class="Product-group-box">
+            <div class="Product-box" data-category="TP" onclick="selectProduct(this, {id: 'TP1', name: 'Colgate', price: 4.50, co2: 5, img: 'TP1.png'})">
+                <img src="TP1.png" alt="Product 1">
+                <p>Colgate</p>
+                <p>£4.50</p>
+                <p>5 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="TP" onclick="selectProduct(this, {id: 'TP2', name: 'Oral-B', price: 3.95, co2: 9, img: 'TP2.png'})">
+                <img src="TP2.png" alt="Product 2">
+                <p>Oral-B</p>
+                <p>£3.95</p>
+                <p>9 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="TP" onclick="selectProduct(this, {id: 'TP3', name: 'AquaFresh', price: 0.95, co2: 8, img: 'TP3.png'})">
+                <img src="TP3.png" alt="Product 3">
+                <p>AquaFresh</p>
+                <p>£0.95</p>
+                <p>8 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="TP" onclick="selectProduct(this, {id: 'TP4', name: 'SensoDyne', price: 6.50, co2: 8, img: 'TP4.png'})">
+                <img src="TP4.png" alt="Product 4">
+                <p>SensoDyne</p>
+                <p>£6.50</p>
+                <p>8 kg of CO2</p>
+            </div>
+
+        </div>
+        <h2>hand soap</h2>
+                <div class="Product-group-box">
+            <div class="Product-box" data-category="HS" onclick="selectProduct(this, {id: 'HS1', name: 'Carex', price: 2.00, co2: 6, img: 'HS1.png'})">
+                <img src="HS1.png" alt="Product 1">
+                <p>Carex</p>
+                <p>£2.00</p>
+                <p>6 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="HS" onclick="selectProduct(this, {id: 'HS2', name: 'Stanford Street', price: 2.00, co2: 6, img: 'HS2.png'})">
+                <img src="HS2.png" alt="Product 2">
+                <p>Stanford Street</p>
+                <p>£0.59</p>
+                <p>5 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="HS" onclick="selectProduct(this, {id: 'HS3', name: 'Palmo Olive', price: 2.50, co2: 3, img: 'HS3.png'})">
+                <img src="HS3.png" alt="Product 3">
+                <p>Palmo Olive</p>
+                <p>£2.50</p>
+                <p>3 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="HS" onclick="selectProduct(this, {id: 'HS4', name: 'Dove', price: 3.00, co2: 7, img: 'HS4.png'})">
+                <img src="HS4.png" alt="Product 4">
+                <p>Dove</p>
+                <p>£3.00</p>
+                <p>7 kg of CO2</p>
+            </div>
+
+        </div>
+
+        <h2>Deoderant</h2>
+        <div class="Product-group-box">
+            <div class="Product-box" data-category="DE" onclick="selectProduct(this, {id: 'DE1', name: 'Sure', price: 2.80, co2: 2, img: 'DE1.png'})">
+                <img src="DE1.png" alt="Product 1">
+                <p>Sure</p>
+                <p>£2.80</p>
+                <p>2 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="DE" onclick="selectProduct(this, {id: 'DE2', name: 'Lynx', price: 6.50, co2: 3, img: 'DE2.png'})">
+                <img src="DE2.png" alt="Product 2">
+                <p>Lynx</p>
+                <p>£6.50</p>
+                <p>3 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="DE" onclick="selectProduct(this, {id: 'DE3', name: 'Nivea', price: 2.75, co2: 2, img: 'DE3.png'})">
+                <img src="DE3.png" alt="Product 3">
+                <p>Nivea</p>
+                <p>£2.75</p>
+                <p>2 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="DE" onclick="selectProduct(this, {id: 'DE4', name: 'Right Guard', price: 1.95, co2: 4, img: 'DE4.png'})">
+                <img src="DE4.png" alt="Product 4">
+                <p>Right Guard</p>
+                <p>£1.95</p>
+                <p>4 kg of CO2</p>
+            </div>
+
+        </div>
+
+        <h2>Shampoo</h2>
+        <div class="Product-group-box">
+            <div class="Product-box" data-category="SH" onclick="selectProduct(this, {id: 'SH1', name: 'Tresemme', price: 4.25, co2: 8, img: 'SH1.png'})">
+                <img src="SH1.png" alt="Product 1">
+                <p>Tresemme</p>
+                <p>£4.25</p>
+                <p>8 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="SH" onclick="selectProduct(this, {id: 'SH2', name: 'Pantene', price: 11.70, co2: 6, img: 'SH2.png'})">
+                <img src="SH2.png" alt="Product 2">
+                <p>Pantene</p>
+                <p>£11.70</p>
+                <p>6 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="SH" onclick="selectProduct(this, {id: 'SH3', name: 'Aussie', price: 15.00, co2: 7, img: 'SH3.png'})">
+                <img src="SH3.png" alt="Product 3">
+                <p>Aussie</p>
+                <p>£15</p>
+                <p>7 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="SH" onclick="selectProduct(this, {id: 'SH4', name: 'Head & Shoulders', price: 13.60, co2: 4, img: 'SH4.png'})">
+                <img src="SH4.png" alt="Product 4">
+                <p>Head & Shoulders</p>
+                <p>£13.60</p>
+                <p>4 kg of CO2</p>
+            </div>
+
+        </div>
+        <h2>Body Wash</h2>
+        <div class="Product-group-box">
+            <div class="Product-box" data-category="BW" onclick="selectProduct(this, {id: 'BW1', name: 'Redox', price: 2.10, co2: 8, img: 'BW1.png'})">
+                <img src="BW1.png" alt="Product 1">
+                <p>Redox</p>
+                <p>£2.10</p>
+                <p>8 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="BW" onclick="selectProduct(this, {id: 'BW2', name: 'Original Source', price: 1.90, co2: 6, img: 'BW2.png'})">
+                <img src="BW2.png" alt="Product 2">
+                <p>Original Source</p>
+                <p>£1.90</p>
+                <p>6 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="BW" onclick="selectProduct(this, {id: 'BW3', name: 'Nivea Men', price: 2.40, co2: 4, img: 'BW3.png'})">
+                <img src="BW3.png" alt="Product 3">
+                <p>Nivea Men</p>
+                <p>£2.40</p>
+                <p>4 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="BW" onclick="selectProduct(this, {id: 'BW4', name: 'Imperial Leather', price: 2.00, co2: 7, img: 'BW4.png'})">
+                <img src="BW4.png" alt="Product 4">
+                <p>Imperial Leather</p>
+                <p> £2.00</p>
+                <p>7 kg of CO2</p>
+            </div>
+
+        </div> 
+        <h2>Conditioner</h2>
+        <div class="Product-group-box">
+            <div class="Product-box" data-category="CO" onclick="selectProduct(this, {id: 'CO1', name: 'Aussie', price: 7.50, co2: 5, img: 'CO1.png'})">
+                <img src="CO1.png" alt="Product 1">
+                <p>Aussie</p>
+                <p>£7.50</p>
+                <p>5 kg of CO2</p>
+            </div>
+             <div class="Product-box" data-category="CO" onclick="selectProduct(this, {id: 'CO2', name: 'LOreal', price: 5.50, co2: 10, img: 'CO2.png'})">
+                <img src="CO2.png" alt="Product 2">
+                <p>L'Oreal</p>
+                <p>£5.50</p>
+                <p>10 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="CO" onclick="selectProduct(this, {id: 'CO3', name: 'Alberto Balsam', price: 0.95, co2: 8, img: 'CO3.png'})">
+                <img src="CO3.png" alt="Product 3">
+                <p>Alberto Balsam</p>
+                <p>£0.95</p>
+                <p>8 kg of CO2</p>
+            </div>
+            <div class="Product-box" data-category="CO" onclick="selectProduct(this, {id: 'CO4', name: 'OGX', price: 6.20, co2: 6, img: 'CO4.png'})">
+                <img src="CO4.png" alt="Product 4">
+                <p>OGX</p>
+                <p>£6.20</p>
+                <p>6 kg of CO2</p>
+            </div>
+
+        </div>
+               
+    </div>
+
+
+    <footer class="footer">
+        <p>Contact</p>
+        <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
+    </footer>
+
+<script src="Optimiserjava.js"></script>
+
+</body>
+</html>

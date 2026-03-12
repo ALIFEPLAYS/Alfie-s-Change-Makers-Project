@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Clear</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+
+        header { 
+            background-color: #0066cc; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        header h1 { 
+            font-size: 28px;
+        }
+
+        nav { 
+            display: flex;
+             gap: 30px; 
+        }
+
+        nav a { 
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer; 
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title { 
+            background-color: transparent;
+            padding: 20px 40px; 
+            border-bottom: 1px solid rgba(0,0,0,0.08); 
+        }
+        .page-title h2 { 
+            color: #333; 
+            font-size: 48px;
+
+        }
+
+        /* Boxes layout: vertical stack that appears to continue off the left edge */
+        .boxes { 
+            display: flex; 
+            gap: 24px; 
+            flex-direction: column; 
+            margin-top: 20px; 
+            overflow: visible; 
+            Padding-left: 20px;
+            Padding-right: 20px;
+        }
+
+        .eachrow {
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            left:20px;
+        }
+
+        .eachrow img {
+            max-height: 400px;
+            max-width: 400px;
+            object-fit: contain;
+
+        }
+
+        /* Individual box styling: white background, black outline, rounded corners */
+        .Ibox { 
+            background: #ffffff; 
+            border: 1px solid #000; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);  
+            overflow-wrap: break-word;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            text-align: center;
+            left: 40%;
+
+        }
+
+        /* Inner content container: keep text within the visible portion of the box */
+
+
+        .box-inner { 
+            position: relative; 
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+            width: 300px;
+        }
+
+        .box-inner img { 
+            max-width: 200px; 
+            height: auto; 
+            border-radius: 5px; 
+            align-self: center;
+        }
+
+        .box p { 
+            color: #555; 
+            line-height: 1.4;
+
+        }
+
+        .content {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer {
+            background-color: #f1f1f1; 
+            padding: 20px; text-align: center; 
+            color: #333; 
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="page-title">Climate Clear</h1>
+        <nav>
+            <a href="ClimateClear.html">About Us</a>
+            <a href="Motivations.html">Motivations</a>
+            <a href="Label.html">Our Label</a>
+            <a href="Thedata.html">The Data</a>
+            <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
+            <a href="obstacles.html">obstacles</a>
+            <a href="referances.html">referances</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>The Climate clear project</h2>
+    </div>
+
+    <div class="content">
+
+        <div class="eachrow">
+            <div class="Ibox">
+                <div class="box-inner">
+                    <p>Climate clear is a project that proposes a way for consumers to make more informed choices about the environmental impact of their shopping decisions.</p>
+                    <img src="Think.png">
+                </div>
+            </div>
+            <div class="Ibox">
+                <div class="box-inner">
+                    <p>With increasing conceren regarding the accelarating warming of our climate, more people have become interested and doing what they can to help. </p>
+                    <h4>What better place to do that than in their weekly shop?</h4>
+                    <img src="chartgoup.png">
+                </div>
+            </div>
+            <div class="Ibox">
+                <div class="box-inner">
+                    <p>On this website you will find information regarding: </p>
+                    <h4>- The motivation behind the project</h4>
+                    <h4>- How the proposed label would function</h4>
+                    <h4>- How the data for said label is gathered and displayed</h4>
+                    <h4>- Obstacles which could hinder the effectivness of the labeling system</h4> 
+                    <h4>- A shopping optimiser in which you can use see to start making an impact today!</h4>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <footer class="footer">
+        <p>Contact</p>
+        <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
+    </footer>
+</body>
+</html>

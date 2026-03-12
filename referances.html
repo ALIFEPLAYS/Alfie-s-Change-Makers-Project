@@ -1,0 +1,171 @@
+<!-- filepath: c:\UNI WORK\CM_project\Motivations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 10; box-sizing: border-box; }
+
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+
+        header { 
+            background-color: #0066cc; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        header h1 { 
+            font-size: 28px;
+        }
+
+        nav { 
+            display: flex;
+             gap: 30px; 
+        }
+
+        nav a { 
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer; 
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title { 
+            background-color: transparent;
+            padding: 20px 40px; 
+            border-bottom: 1px solid rgba(0,0,0,0.08); 
+        }
+        .page-title h2 { 
+            color: #333; 
+            font-size: 48px;
+
+        }
+
+        /* Boxes layout: vertical stack that appears to continue off the left edge */
+        .boxes { 
+            display: flex; 
+            gap: 24px; 
+            flex-direction: column; 
+            margin-top: 20px; 
+            overflow: visible; 
+            Padding-left: 20px;
+            Padding-right: 20px;
+        }
+
+        .eachrow {
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            left:20px;
+        }
+
+        .eachrow img {
+            max-height: 400px;
+            max-width: 400px;
+            object-fit: contain;
+
+        }
+
+        /* Individual box styling: white background, black outline, rounded corners */
+        .box { background: #ffffff; 
+            border: 1px solid #000; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);  
+            overflow-wrap: break-word;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+
+        }
+
+        /* Inner content container: keep text within the visible portion of the box */
+
+
+        .box-inner { 
+            position: relative; 
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .box p { 
+            color: #555; 
+            line-height: 1.4;
+
+        }
+
+        .footer {
+            background-color: #f1f1f1; 
+            padding: 20px; 
+            text-align: center; 
+            color: #333; 
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Climate Clear</h1>
+        <nav>
+              <a href="ClimateClear.html">About Us</a>
+            <a href="Motivations.html">Motivations</a>
+            <a href="Label.html">Our Label</a>
+            <a href="Thedata.html">The Data</a>
+            <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
+            <a href="obstacles.html">obstacles</a>
+            <a href="referances.html">referances</a>
+    </header>
+    <div class="page-title">
+        <h2>References</h2>
+    </div>
+    <div class="boxes">
+
+            <!-- Box 4 -->
+            <div class="box">
+                <div class="box-inner">
+                    <h3>References for website</h3>
+                    <p>[1] British Retail Consortium (n.d.) Climate action. Available at: https://brc.org.uk/priorities/sustainability/climate-action/ (Accessed: 11 February 2026).
+
+                    <p>[2] Department for Energy Security and Net Zero (2024) DESNZ public attitudes tracker: net zero and climate change, spring 2024 (UK). Available at: https://www.gov.uk/government/statistics/desnz-public-attitudes-tracker-spring-2024/desnz-public-attitudes-tracker-net-zero-and-climate-change-spring-2024-uk (Accessed: 11 February 2026).</p>
+
+                    <p>[3] Cecchini, M. and Warin, L. (2016) ‘Impact of food labelling systems on food choices and eating behaviours: a systematic review and meta-analysis of randomized studies’, Obesity Reviews, 17(3), pp. 201–210. doi:10.1111/obr.12364.</p>
+
+                    <p>[4] Agarwal, P. (2025) Perfect Competition Explained. Intelligent Economist. Available at: https://www.intelligenteconomist.com/perfect-competition/ (Accessed: 1 March 2026).</p>
+                </div>
+            </div>
+
+                        <!-- Box 4 -->
+            <div class="box">
+                <div class="box-inner">
+                    <h3>References for data in the dishwashing tablet example</h3>
+                    <p>Eco-conception (n.d.) Comparative life-cycle assessment of laundry detergent formulations in the UK. Available at: https://www.eco-conception.fr/data/sources/users/306/docs/acv-detergents.pdf (Accessed: 11 February 2026).</p>
+
+                    <p>Ariel (n.d.) Ariel life cycle assessment. Available at: https://www.ariel.co.uk/en-gb/about-ariel/sustainability/ariel-life-cycle-assessment (Accessed: 11 February 2026).</p>
+
+                    <p>ENDS Report (n.d.) Tesco launches carbon labels on 20 products. Available at: https://www.endsreport.com/article/1570019/tesco-launches-carbon-labels-20-products (Accessed: 11 February 2026).</p>
+
+                    <p>Procter & Gamble (n.d) Comparative life-cycle assessment of laundry detergent formulations in the UK. Available at: https://www.eco-conception.fr/data/sources/users/306/docs/acv-detergents.pdf (Accessed: 11 February 2026).</p>
+                </div>
+            </div>
+    
+    <footer class="footer">
+        <p>Contact</p>
+        <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
+    </footer>
+</body>
+</html>

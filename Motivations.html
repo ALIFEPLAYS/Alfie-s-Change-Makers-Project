@@ -1,0 +1,203 @@
+<!-- filepath: c:\UNI WORK\CM_project\Motivations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 10; box-sizing: border-box; }
+
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+
+        header { 
+            background-color: #0066cc; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        header h1 { 
+            font-size: 28px;
+        }
+
+        nav { 
+            display: flex;
+             gap: 30px; 
+        }
+
+        nav a { 
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer; 
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title { 
+            background-color: transparent;
+            padding: 20px 40px; 
+            border-bottom: 1px solid rgba(0,0,0,0.08); 
+        }
+        .page-title h2 { 
+            color: #333; 
+            font-size: 48px;
+
+        }
+
+        /* Boxes layout: vertical stack that appears to continue off the left edge */
+        .boxes { 
+            display: flex; 
+            gap: 24px; 
+            flex-direction: column; 
+            margin-top: 20px; 
+            overflow: visible; 
+            Padding-left: 20px;
+            Padding-right: 20px;
+        }
+
+        .eachrow {
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            left:20px;
+        }
+
+        .eachrow img {
+            max-height: 400px;
+            max-width: 400px;
+            object-fit: contain;
+
+        }
+
+        /* Individual box styling: white background, black outline, rounded corners */
+        .box { background: #ffffff; 
+            border: 1px solid #000; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);  
+            overflow-wrap: break-word;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+
+        }
+
+        /* Inner content container: keep text within the visible portion of the box */
+
+
+        .box-inner { 
+            position: relative; 
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .box p { 
+            color: #555; 
+            line-height: 1.4;
+
+        }
+
+        .footer {
+            background-color: #f1f1f1; 
+            padding: 20px; text-align: center; 
+            color: #333; 
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Climate Clear</h1>
+        <nav>
+              <a href="ClimateClear.html">About Us</a>
+            <a href="Motivations.html">Motivations</a>
+            <a href="Label.html">Our Label</a>
+            <a href="Thedata.html">The Data</a>
+            <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
+            <a href="obstacles.html">obstacles</a>
+            <a href="referances.html">referances</a>
+            </header>
+                <div class="page-title">
+                    <h2>Motivations</h2>
+                </div>
+
+        <div class="boxes">
+            <!-- Box 1 -->
+            <div class="eachrow">
+                <div class="box">
+                    <img>
+                    <div class="box-inner">
+                       <h3>Why are supermarkets important in the fight against climate change</h3>
+                       <p>[1] Retail sector emissions account for around a third of all household carbon emissions. This large chunk feels hard to remove. Supermarkets have provided people with easy access to all the essentials required to support households. The production and transport of these necessary products produce pollutants such as greenhouse gases, PFAs and particulates, which can leech into the environment. This fact (at the moment) can’t be avoided, however with clear information it can be reduced.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="eachrow">
+                <div class="box">
+                    <div class="box-inner">
+                       <h3>The state of the retail sector</h3>
+                       <p>[4] The structure of the retail sector is one in which highly substitutional products compete for market dominance. For each essential task that is required in the household, a product is required. However when a person goes to the store, they are presented with a dozen different brands all selling the same product. This type of market can be described as highly competitive. In these competitive markets, brands compete for market share. The usual powerful tools of pricing and quality of product are not as effective. This means the difference in utility to the buyer is decided by other factors. This has led many retail brands to compete heavily in branding to boost their perceived utility to customers. Climate Clear proposes that companies should instead compete on something that actually provides the consumer utility - decreasing their carbon footprint.</p>
+                    </div>
+                    <img src="Competitivemarket.png">
+                </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="eachrow">
+                <div class="box">
+                    <img src="Concernstat.png">
+                    <div class="box-inner">
+                       <h3>How environmental impact labels can make a difference</h3>
+                       <p>[2] As the effects of the climate crisis ramp up, with increasing frequency and severity of climate related disasters, decreasing biodiversity and sea level rise; people's attention towards their carbon footprint has grown. People now gain utility in choosing the more environmentally friendly option in their daily lives, so it is only fair that they can meet their goals with their everyday shopping. A government survey in 2024 found that 80% of people aged between 16 and 65 are concerned about climate change, with 37% of respondents saying they are very concerned.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="eachrow">
+                <div class="box">
+                    <div class="box-inner">
+                       <h3>Companies are aware of our interests</h3>
+                       <p>Retail companies are aware of this increase in shoppers' demand for more sustainable options. Many supermarket chains such as Tesco and Sainsburys and retail product providers have already set climate targets for 2030. The mechanisms in which these climate targets however are up to the companies themselves. Many of these companies road to net-zero, such as Brewdog, consist largely of funding projects with a beneficial effect on the environment either by utilizing the voluntary carbon credit market or another mechanism. The focus of these projects can include: preventing future emissions (eg. funding for clean energy production), protecting or making new carbon sinks (eg. protecting forest regions) or taking carbon directly out of the atmosphere (eg. Carbon capture and storage projects). These although a net positive for the environment can be prone to greenwashing with many projects not reaching their targets. Furthermore it can provide a de-incentive for companies to look at how they can reduce the carbon emissions themselves. However with labeling relevant to product lifecycle it can push the companies choices closer to the manufacturing side which can accelerate development in making them more green.</p>
+                    </div>
+                    <img src="ecoproduct.png">
+                </div>
+            </div>
+
+            <!-- Box 5 -->
+            <div class="eachrow">
+                <div class="box">
+                    <img>
+                    <div class="box-inner">
+                       <h3>Whats been tried before?</h3>
+                       <p>The idea of differentiating retail products based on an eco-friendly narrative has been used by companies before. Greenwashing is a marketing strategy in which a company attempts to appear more eco-friendly than they actually are. In the context of retail shopping, this can come in the form of claims on the packaging such as “Eco-friendly”, “Lower Carbon” or “CFC - free”. These claims are commonly not substantiated in a manner in which the average shopper would be able to see or are non relevant to the product and therefore can mislead the buyer.</p>
+                       <p>Some measures have been put in place to combat this. Eco labels such as The Carbon Trust, EU Ecolabel and Blue Angel are verifiers which can ensure that the product is, by their own criteria, Eco-friendly. This system can give a better indication to customers than just claims and is a step in the right direction. However, there are some caveats: Many of these labels do not give precise data regarding how eco-friendly the product is and the criteria in which the product is verified is likely not information that the customers would have as it can be complicated and time consuming to find. In addition, the process of verification can be time consuming and expensive for the companies themselves. This leads to some products that would have been verified not receiving the label.</p>
+                       <p>We believe that these issues can be revolved with our labelling system, and finally give shoppers an accurate idea of the environmental impact of their purchases.</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Contact</p>
+        <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
+    </footer>
+</body>
+</html>

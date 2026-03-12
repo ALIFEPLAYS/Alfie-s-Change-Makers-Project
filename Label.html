@@ -1,0 +1,209 @@
+<!-- filepath: c:\UNI WORK\CM_project\Motivations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 10; box-sizing: border-box; }
+
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+
+        header { 
+            background-color: #0066cc; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        header h1 { 
+            font-size: 28px;
+        }
+
+        nav { 
+            display: flex;
+             gap: 30px; 
+        }
+
+        nav a { 
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer; 
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title { 
+            background-color: transparent;
+            padding: 20px 40px; 
+            border-bottom: 1px solid rgba(0,0,0,0.08); 
+        }
+        .page-title h2 { 
+            color: #333; 
+            font-size: 48px;
+
+        }
+
+        /* Boxes layout: vertical stack that appears to continue off the left edge */
+        .boxes { 
+            display: flex; 
+            gap: 24px; 
+            flex-direction: column; 
+            margin-top: 20px; 
+            overflow: visible; 
+            Padding-left: 20px;
+            Padding-right: 20px;
+        }
+
+        .eachrow {
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            left:20px;
+        }
+
+        .eachrow img {
+            max-height: 400px;
+            max-width: 400px;
+            object-fit: contain;
+
+        }
+
+        /* Individual box styling: white background, black outline, rounded corners */
+        .box { background: #ffffff; 
+            border: 1px solid #000; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);  
+            overflow-wrap: break-word;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+
+        }
+
+        /* Inner content container: keep text within the visible portion of the box */
+
+
+        .box-inner { 
+            position: relative; 
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .box p { 
+            color: #555; 
+            line-height: 1.4;
+
+        }
+
+        .footer {
+            background-color: #f1f1f1; 
+            padding: 20px; text-align: center; 
+            color: #333; 
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Climate Clear</h1>
+        <nav>
+              <a href="ClimateClear.html">About Us</a>
+            <a href="Motivations.html">Motivations</a>
+            <a href="Label.html">Our Label</a>
+            <a href="Thedata.html">The Data</a>
+            <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
+            <a href="obstacles.html">obstacles</a>
+            <a href="referances.html">referances</a>
+            </header>
+    <div class="page-title">
+        <h2>The Label</h2>
+    </div>
+
+
+    <div class="boxes">
+        <div class="eachrow">
+            <div class="box">
+                <div class="box-inner">
+                    <h3>Our insperation</h3>
+                    <p>[3] As explained in the motivations page, the goal of our label is to give accurate and clear data to shoppers, so they can make easy comparisons between substitutional products on their environmental impact. With how busy the world has become, it can’t be expected for people to do research on every product they could potentially buy. Companies know this and use this asymmetric information to mislead shoppers. Our proposed labelling system is here to provide a path to stop this.</p>
+                    <p>Our labelling system would provide accurate data on relevant pollutants on all products that a shopper would buy. Consistent labelling and the use of our ‘traffic light system’ would allow customers to understand and compare easily, even when in a rush. Ensuring that they can reach their own environmental goals whilst keeping up with the rest of their lives.</p>
+                    <p>The traffic light system, based on the same system used on food products, has been proven to be more effective at influencing shopper choices than alternatives in black or white, or those without data. A meta analysis showed that with the traffic light system, shoppers were 29.36% more likely to go for the healthier option.</p>
+                    <p>Due to our system being similar to the one used with food products the barrier to understanding should be significantly lower, as shoppers are familiar with the system and therefore more likely to engage with it.</p>
+                </div>
+                <img src="Traffic.png">
+            </div>
+        </div>
+  <!-- Box 3 -->
+       <div class="eachrow">
+            <div class="box">
+                <img src="flowerlabel.png">
+                <div class="box-inner">
+                    <h3>How to interperet our label</h3>
+                    <p>On the label itself, it would consist of up to 5 categories on the petals of a flower. These would feature the pollutant, the mass of that pollutant produced per unit of product (eg per tablet in a bag of dishwasher tablets) and colours representative of the ranking of this value compared to other products in its group. An overall rank of the products environmental impact will be placed in the center and the colour of the centre and stem will represent where it ranks compared with other products</p>
+                </div>
+            </div>
+        </div>
+            <!-- Box 4 -->
+        <div class="eachrow">
+            <div class="box">
+                <div class="box-inner">
+                    <h3>How Products are grouped</h3>
+                    <p>The groups in which these products would be ranked are decided as follows: products that serve the same purpose when used. For example, all toothpastes would be in the same group, even if one states its purpose is for ‘whitening’ or for ‘rebuilding enamel’, however mouthwash would not be included in the group as it does not replace toothpaste and the act of brushing the teeth must still be done. In addition groupings would include all products of that group sold in the UK. This means that even if your local supermarket does not include all the products within their group, the rankings on the products that are there will include them.</p>
+                    <p>Although products within the same group have similar compositions, products of different groups may have vastly different contents. These contents may have different methods of raw material extraction, refining and production processes which can lead to different pollutants being more relevant to different product groups. The categories that we have chosen to use are as follows:</p>
+                    <p>- Greenhouse gases (using equivalent CO2 mass for non-CO2 gases)</p>
+                    <p>- Hazardous waste ( only includes waste not correctly managed)</p>
+                    <p>- Recyclability of the product</p>
+                    <p>- Overall Company impact</p>
+                </div>
+                <img src="Supermarketisle.png">
+            </div>
+        </div>
+            <!-- Box 4 -->
+        <div class="eachrow">
+
+            <div class="box">
+                <div class="box-inner">
+                    <h3>How we decided what to track</h3>
+                    <p>When choosing which pollutants to choose from, we looked at the following categories:</p>
+                    <p>- Prevalence in Manufacturing</p>
+                    <p>- Notoriety to Public</p>
+                    <p>- Acute Harm to Environment</p> 
+                    <p>- Long-term Harm to Planet</p>
+                    <p>- How well researched the affect of the pollutant is</p>
+                    <p>- If it directly harms humans</p>
+                    <p>- Reach of effects</p>
+                    <p>- How efficiently the production of the pollutant can be Reduced</p>
+                    <p>- Cost to Reduce</p>
+                    <p>- Traceability/Transparency of the pollutant</p>
+                    <p>From this we decided that Greenhouse gases are essential for our labelling system, they are extremely prevalent in the conversation of environmental, being the leading cause of climate change. They are also the main pollutant people associate with the idea of being green.</p> 
+                    <p>Within the category of Hazardous waste there is the sub-group of toxic gas emissions. In which we have included molecules such as: nitrous oxides, sulfur oxides and VOCs (Volatile organic compounds). The other category is hazardous soluble materials such as heavy metals, PFA’s and microplastics. These compounds are capable of leeching into plants and animals resulting in build-up of toxic material in the environment which can damage ecosystems. In addition these compounds commonly result in these pollutants entering our food-chains which can result in health complications. This appears to be the case for both PFAs (polyfluoroalkyl substances or forever chemicals) and microplastics. Both have been found in the human body in increasing concentraions in recent years and the long-term health affects of these compounds on the human body and environment are still being studied.</p>
+                    <p>As previously mentioned. Different product groups would likely have different pollutants that are most relevant in their production and therefore on the label only the two most relevant pollutants from this category would be featured on the label.</p>
+                    <p>For the category of ‘recyclability’ we would use the UKs Recyclability Assessment methodology (RAM) and would be represented on the packaging as either green, amber or Red.</p>
+                    <p>For the ‘Overall company impact’ this would include environmental projects in which the company is a part of. This value would be shown on the packaging as an A-F scale.</p>                                       
+                </div>
+            </div>
+        </div>
+    </div>      
+
+    
+    <footer class="footer">
+        <p>Contact</p>
+        <p>Address: Exhibition Road, South Kensington, London SW7 2AZ</p>
+    </footer>
+</body>
+</html>

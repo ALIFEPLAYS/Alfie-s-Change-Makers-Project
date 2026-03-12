@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Optimiser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: Arial, sans-serif;
+            background-image: url("sunbackground.png");
+            background-size: cover;
+            background-attachment: fixed;
+             }
+        
+        header { background-color: #0066cc; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 28px; }
+
+        nav { display: flex; gap: 30px; }
+        nav a { color: white; text-decoration: none; font-size: 16px; cursor: pointer; }
+        nav a:hover { text-decoration: underline; }
+
+        .page-title { background-color: transparent; padding: 20px 80px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .page-title h2 { color: #333; font-size: 48px; }
+
+        .Front-box { background: #ffffff; border: 1px solid #000; padding: 0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); width: 90vw; box-sizing: border-box; margin-top:20px; text-align: center; }
+        
+        
+        /* Inner content container: keep text within the visible portion of the box */
+        
+        .Front-box-inner {
+            position: relative;
+            padding: 18px;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        
+        .Front-box p { color: #000000; line-height: 1.4; text-align: center; font-size: 24px; }
+        
+        .Front-box h3 {color:#0066cc; font-size: 48px; position: relative; text-align: center; margin-top: 20px; margin-bottom: 20px;}
+
+        .Front-box img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        /* image stack for hover swapping */
+        .image-stack {
+            position: relative;
+            display: inline-block;
+        }
+        .image-stack img {
+            display: block;
+            max-width: 100%;
+        }
+        .image-stack .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .image-stack .front:hover {
+            opacity: 0;
+        }
+        .Front-box img:hover{
+            opacity:0;
+            transition: opacity 0.1s ease;
+
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            border-top: 1px solid #ccc;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Climate Clear</h1>
+        <nav>
+            <a href="ClimateClear.html">About Us</a>
+            <a href="Motivations.html">Motivations</a>
+            <a href="Label.html">Our Label</a>
+            <a href="Thedata.html">The Data</a>
+            <a href="Shoppingoptimiser.html">Shopping Optimiser</a>
+            <a href="obstacles.html">obstacles</a>
+            <a href="referances.html">referances</a>
+        </nav>
+    </header>
+    
+    <div class="page-title">
+    <h2>Shopping Optimiser</h2>
+    
+    <div class="Front-box">
+        <h3 class="Front-box-inner">Reduce the carbon footprint of your shopping. Today!</h3>
+        <p class="Front-box-inner">Click below to get started!</p>
+        <!-- stacked images: closed basket on top, open basket underneath -->
+        <a href="ShoppingSelector.html" target="_blank">
+           <div class="image-stack">
+               <img src="basket.png" class="front" alt="closed basket">
+               <img src="OpenBasket.png" class="back" alt="open basket">
+           </div>
+        </a>
+        <p class="Front-box-inner" >Our shopping optimiser helps you make informed choices by providing carbon footprint information for products. By using our tool, you can easily compare the environmental impact of different items and choose the more sustainable option. Start shopping smarter and contribute to a greener future with our shopping optimiser.</p>
+        <p class="Front-box-inner">Disclamer: (Prices and CO2 emmissions for items listed may not be accurate and should not be taken as true)</p>
+    </div>
+    <div class="basket-box"></div>
+    
+
+</body>
+</html>
