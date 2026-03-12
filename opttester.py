@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-app = CORS(app) or app
+CORS(app)
 
 df = pd.read_excel('Optimiserdata.xlsx', sheet_name='Sheet2')
 
@@ -163,4 +163,5 @@ def optimise():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
