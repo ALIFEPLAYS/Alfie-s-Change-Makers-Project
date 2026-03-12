@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask import render_template
 
-OPT = Flask(__name__)
+OPT = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'templates'))
 CORS(OPT)
 
 import os
@@ -169,6 +169,7 @@ def optimise():
 
 if __name__ == '__main__':
     OPT.run(debug=True)
+
 
 
 
