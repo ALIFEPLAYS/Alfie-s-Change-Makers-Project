@@ -1,13 +1,15 @@
+import os
 import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask import render_template
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 OPT = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'templates'))
 CORS(OPT)
 
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 df = pd.read_excel(os.path.join(BASE_DIR, 'Optimiserdata.xlsx'), sheet_name='Sheet2')
 
 # Category definitions: prefix -> (Name col, Price col, CO2 col)
@@ -169,6 +171,7 @@ def optimise():
 
 if __name__ == '__main__':
     OPT.run(debug=True)
+
 
 
 
