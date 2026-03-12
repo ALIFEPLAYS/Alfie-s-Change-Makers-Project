@@ -3,3 +3,4 @@ gunicorn
 numpy
 pandas
 scipy
+flask_cors
